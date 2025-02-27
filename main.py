@@ -14,7 +14,7 @@ response = requests.get(OWM_ENDPOINT, params=parameters)
 response.raise_for_status()
 weather_data = response.json()
 
-will_rain = False
+will_rain = True
 weather_codes = [int(weather_data['list'][i]['weather'][0]['id']) for i in range(4)]
 for i in weather_codes:
     if i < 700:
